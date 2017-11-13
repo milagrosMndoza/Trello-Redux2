@@ -1,0 +1,26 @@
+{
+  "name": "examen_react_redux",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://milagrosmndoza.github.io/Trello-React-Redux/",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.5",
+    "react-center": "^1.1.1",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux-zero": "^4.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  }
+}

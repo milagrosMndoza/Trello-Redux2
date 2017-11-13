@@ -1,0 +1,73 @@
+a{
+    transition: all 0.15s ease-out 0s;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: .3em 0;
+}
+.margin{
+    margin-top: 20%;
+}
+.bodyUp{
+    background: #89609E;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+.form-horizontal .form-group{
+    margin-right: 0px;
+}
+.logo{
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+    height: 70px;
+    width: 206px;
+    margin: 1.5em 0;
+}
+
+.inputUp{
+    border: 0px none;
+    width: 350px;
+    padding: 1.1em;
+    font-size: 1.1em;
+    border-radius: 3px;
+    box-shadow: none;
+    line-height: 1.2em;
+    margin: .3em 0;
+}
+
+.btnUp{
+    transition: all 0.15s ease-out 0s;
+    width: 350px;
+    padding: 1.1em;
+    font-size: 1.1em;
+    background: transparent;
+    color: #89609E;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    line-height: 1.2em;
+    margin: .3em 0;
+    width:100%;
+}
+.btnUp:hover{
+    color: #89609E !important;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+.navlinkIn, .navlinkIn:hover{
+    text-decoration: none;
+    color: #bea7ca;
+    font-weight: 600;  
+}
+
+.navlinkUp:hover{
+    transition: all 0.15s ease-out 0s;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: .3em 0;
+}
