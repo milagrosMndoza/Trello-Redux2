@@ -1,10 +1,19 @@
-
-.bodyIn{
+a{
+    transition: all 0.15s ease-out 0s;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: .3em 0;
+}
+.margin{
+    margin-top: 20%;
+}
+.bodyUp{
     background: #89609E;
     background-size: cover;
     position: relative;
     height: 100vh;
-    margin-bottom: 10%;
 }
 .form-horizontal .form-group{
     margin-right: 0px;
@@ -18,7 +27,7 @@
     margin: 1.5em 0;
 }
 
-.inputIn{
+.inputUp{
     border: 0px none;
     width: 350px;
     padding: 1.1em;
@@ -29,13 +38,13 @@
     margin: .3em 0;
 }
 
-.btnIn{
+.btnUp{
     transition: all 0.15s ease-out 0s;
     width: 350px;
     padding: 1.1em;
     font-size: 1.1em;
     background: transparent;
-    color:grey;
+    color: #fff;
     border: 1px solid #fff;
     border-radius: 3px;
     box-shadow: none;
@@ -43,7 +52,7 @@
     margin: .3em 0;
     width:100%;
 }
-.btnIn:hover{
+.btnUp:hover{
     color: #89609E !important;
     background-color: rgba(255, 255, 255, 0.37);
 }
@@ -54,3 +63,11 @@
     font-weight: 600;  
 }
 
+.navlinkUp:hover{
+    transition: all 0.15s ease-out 0s;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: .3em 0;
+}

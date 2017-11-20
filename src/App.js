@@ -1,29 +1,37 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, NavLink, Switch, Redirect } from 'react-router-dom';
-import {SingIn} from './SingIn';
-import {SingUp} from './SingUp';
-import {BoardTrello} from './BoardTrello';
-import { connect } from 'redux-zero/react';
+import { HashRouter, Route, NavLink, Switch, Redirect } from 'react-router-dom';
+import {SingIn} from './components/singin/SingIn';
+import {SingUp} from './components/SingUp/SingUp';
+import {Board} from './components/Board/BoardTrello';
+import {BoardTrello} from './components/Board/BoardTrello';
+import {Home} from './Home'
 
-const App =({board, user})=> {
+// import {readBoard} from './actions    
+import { connect } from 'redux-zero/react';
+0
+const App =({successLogin, user, stages, tasks})=> {
+  // readBoard()
+  console.log (stages);
+  console.log (tasks);
 return (
- <BrowserRouter>
+ <HashRouter>
       <Switch>
-        <Route exact path="/" render={() => <SingIn />} />
-        <Route exact path="/singIn" render={() => <SingIn />} /> 
-        <Route exact path="/singUp" render={() => <SingUp />} />
-        <Route exact path="/BoardTrello" render={() => <BoardTrello />} />
-        <Route render={() => <Redirect to={"/"} />}/>
+        <Route  path="/SingIn" render={() => <SingIn successLogin={successLogin} />} /> 
+        <Route  path="/SingUp" render={() => <SingUp successLogin={successLogin}  />} />
+        <Route  path="/Board" render={() => <Board stages={stages}  tasks = {tasks}/>} />
+        <Route  path="/home" render={() => <Home successLogin={successLogin}  user = {user}/>} />
+
+        {/* <Route render={() => <Redirect to={"/"} />}/> */}
+        <Route exact path="/" render={() => <SingIn successLogin={successLogin}  />} />
       </Switch>
-</BrowserRouter> 
+</HashRouter> 
 
 )
 }
 /* <SingUp/> */
-const mapToProps = ({ board, user }) => ({
-    board, user 
- });
+const mapToProps = ({successLogin, user,stages, tasks})  => ({successLogin, user ,stages, tasks});
  export default connect(mapToProps)(App);
 
+ 
