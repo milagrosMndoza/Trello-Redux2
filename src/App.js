@@ -10,7 +10,7 @@ import {Home} from './Home'
 
 // import {readBoard} from './actions    
 import { connect } from 'redux-zero/react';
-0
+
 const App =({successLogin, user, stages, tasks})=> {
   // readBoard()
   console.log (stages);

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './SingUp.css';
+import {connect} from 'redux-zero/react'
 import {NavLink, Redirect} from 'react-router-dom';
 import Center from 'react-center';
 import {Form, FormGroup, FormControl, Col, Button, ControlLabel} from 'react-bootstrap';
-import {signIn, signOut, signUp} from '../../actions/actionsLogin'
+import {signIn, signOut, signUp} from './actions/actions'
 
 // import {SingUp} from './actions'
 
@@ -57,3 +58,5 @@ export const SingUp = ({successLogin})=>{
     )
 
 }
+const mapToProps = ({successLogin})  => ({successLogin}) 
+export default connect(mapToProps)(SingUp) ;

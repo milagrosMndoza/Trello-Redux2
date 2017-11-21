@@ -1,21 +1,23 @@
 import createStore from 'redux-zero'
 
 const initialState = {
-    successLogin : false,
-    user : {
-       id : null,
-       email :  null,
-       fullname :  null,
-       survey :  null,
-       question :  null,
-       options :  null            
-    } ,
-   stages: [ ],
-   tasks: [ ]
-};
+   successLogin : false,
+
+   user : {
+      id : null,
+      email :  null,
+      fullname :  null,
+      survey :  null,
+      question :  null,
+      options :  null            
+   },
+   boards : null,
+   stages : null,
+   tasks : null   
+}
 
 const store = createStore (initialState);
-export default store; 
+export default store
 
 
 
