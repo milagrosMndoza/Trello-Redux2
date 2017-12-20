@@ -5,11 +5,10 @@ const initialState = {
 
    user : {
       id : null,
-      email :  null,
       fullname :  null,
-      survey :  null,
-      question :  null,
-      options :  null            
+      lastname :  null,
+      email :  null,
+      password :  null            
    },
    boards : null,
    stages : null,

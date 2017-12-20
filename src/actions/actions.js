@@ -1,14 +1,14 @@
-import store from './store/store'
-import {auth, database} from './actions/firebase';
+import store from '../store/store';
+import firebase from 'firebase';
+import {auth, database} from './firebase';
 
-export function signUp (fullname, email, pass, survey, question, options) 
+export function signUp (fullname, lastname, email, pass) 
 {
-   console.log ('signUp' + fullname + email + pass);
+   console.log ('signUp' + fullname + lastname + email + pass);
 
    auth.createUserWithEmailAndPassword (email, pass).then ( user => {
       let newuser = {
-         fullname, email, survey, question, options
-      }
+         fullname, lastname, email, pass} 
       database.ref ('users/' + user.uid).set (newuser);   
 
      // database.ref ('users/' + user.uid + '/options').update ( 'option1, option2, option3...');   
@@ -21,11 +21,11 @@ export function signUp (fullname, email, pass, survey, question, options)
          store.setState ( {
             user: {
                id : user.uid,
-               email :  fullUserInfo.email,
                fullname :  fullUserInfo.fullname,
-               survey :  fullUserInfo.survey,
-               question :  fullUserInfo.question,
-               options :  fullUserInfo.options               
+               lastname :  fullUserInfo.lastname,
+               email :  fullUserInfo.email,
+               pass :  fullUserInfo.pass,
+                             
             }
          })
       })
@@ -67,10 +67,7 @@ export function signIn (user, pass) {
             user: {
                id : userObj.uid,
                email :  fullUserInfo.email,
-               fullname :  fullUserInfo.fullname,
-               survey :  fullUserInfo.survey,
-               question :  fullUserInfo.question,
-               options :  fullUserInfo.options               
+               pass :  fullUserInfo.pass,             
             }
          })
       })
@@ -118,11 +115,10 @@ auth.onAuthStateChanged(user => {
             successLogin : true,
             user: {
                id : user.uid,
-               email :  fullUserInfo.email,
                fullname :  fullUserInfo.fullname,
-               survey :  fullUserInfo.survey,
-               question :  fullUserInfo.question,
-               options :  fullUserInfo.options               
+               lastname :  fullUserInfo.lastname,
+               email :  fullUserInfo.email,
+               pass :  fullUserInfo.pass,              
             }
          })
       });
@@ -155,7 +151,7 @@ auth.onAuthStateChanged(user => {
          let tasks = [];
          res.forEach ( snap  => {
              const task = snap.val();
-             tasks.push (task)
+             tasks.push (task);
          })      
          store.setState ({
             tasks : tasks

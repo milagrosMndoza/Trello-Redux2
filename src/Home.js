@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'redux-zero/react'
 import {NavLink,  Redirect } from 'react-router-dom';
-import Board from '../../components/Board/BoardTrello';
+import {Board} from './components/Board/BoardTrello';
 import {signIn, signOut, signUp, addNewBoard} from './actions/actions'
 
 // import './App.css';
@@ -41,7 +41,7 @@ export const Home  = ({successLogin, user, boards, stages, tasks}) => {
             SignOut
          </button>   
             <div>
-                 {user.email} - {user.fullname} - {user.survey} -  {user.question} - {user.options} 
+             {user.fullname} - {user.lastname} -  {user.email} - {user.password} 
             </div>
 
       </div>

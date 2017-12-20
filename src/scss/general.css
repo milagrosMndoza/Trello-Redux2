@@ -12,7 +12,7 @@ a {
 }
 
 .bodyUp {
-  background: #89609E;
+  background: "#89609E";
   background-size: cover;
   position: relative;
   height: 100vh;
@@ -48,7 +48,7 @@ a {
   padding: 1.1em;
   font-size: 1.1em;
   background: transparent;
-  color: #89609E;
+  color: "#89609E";
   border: 1px solid #fff;
   border-radius: 3px;
   box-shadow: none;
@@ -57,8 +57,8 @@ a {
   width: 100%;
 }
 
-.btnUp:hover {
-  color: #89609E !important;
+.btnUp hover {
+  color: "#89609E" !important;
   background-color: rgba(255, 255, 255, 0.37);
 }
 

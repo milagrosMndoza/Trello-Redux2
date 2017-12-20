@@ -21,7 +21,7 @@ export const Board = ({stages, tasks}) => {
                 <Col sm={1}>
                     <i className="fa fa-columns"></i>
                     <span>Boards</span>
-                </Col>
+                </Col>-
                 
                 <Col sm={8}>
                 <Center>
@@ -59,3 +59,6 @@ export const Board = ({stages, tasks}) => {
     
    ); 
  }
+
+
+ export default Board;

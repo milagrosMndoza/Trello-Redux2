@@ -8,7 +8,8 @@ var config = {
     storageBucket: "trello-redux-firebase.appspot.com",
     messagingSenderId: "459256786270"
   };
- firebase.initializeApp(config);
+
+firebase.initializeApp(config);
 
 export default firebase;
 
